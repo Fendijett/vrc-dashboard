@@ -62,25 +62,34 @@ $(function() {
   };
   var options = {
     scales: {
-      y: {
+      yAxes: [{
         ticks: {
           beginAtZero: true
+        },
+        gridLines: {
+          color: "rgba(204, 204, 204,0.1)"
         }
-      }
+      }],
+      xAxes: [{
+        gridLines: {
+          color: "rgba(204, 204, 204,0.1)"
+        }
+      }]
     },
     legend: {
       display: false
     },
     elements: {
-      line:{
-        tension: 0.5
+      line: {
+        tension: 0.5,
       },
       point: {
         radius: 0
       }
     }
-
   };
+
+  
   var doughnutPieData = {
     datasets: [{
       data: [30, 40, 30],
@@ -143,14 +152,26 @@ $(function() {
   };
 
   var areaOptions = {
-    elements: {
-      line: {
-        tension: 0.5
-      }
-    },
     plugins: {
       filler: {
         propagate: true
+      }
+    },
+    scales: {
+      yAxes: [{
+        gridLines: {
+          color: "rgba(204, 204, 204,0.1)"
+        }
+      }],
+      xAxes: [{
+        gridLines: {
+          color: "rgba(204, 204, 204,0.1)"
+        }
+      }]
+    },
+    elements: {
+      line: {
+        tension: 0.5,
       }
     }
   }
@@ -191,24 +212,21 @@ $(function() {
       }
     },
     elements: {
-      line:{
-        tension:0.5
-      },
       point: {
         radius: 0
       }
     },
     scales: {
-      x: {
+      xAxes: [{
         gridLines: {
           display: false
         }
-      },
-      y: {
+      }],
+      yAxes: [{
         gridLines: {
           display: false
         }
-      }
+      }]
     }
   }
 
@@ -272,10 +290,18 @@ $(function() {
 
   var scatterChartOptions = {
     scales: {
-      x: {
+      xAxes: [{
         type: 'linear',
-        position: 'bottom'
-      }
+        position: 'bottom',
+        gridLines: {
+          color: "rgba(204, 204, 204,0.1)"
+        }
+      }],
+      yAxes: [{
+        gridLines: {
+          color: "rgba(204, 204, 204,0.1)"
+        }
+      }]
     }
   }
   // Get context with jQuery - using jQuery's .get() method.

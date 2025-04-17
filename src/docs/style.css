@@ -1,9 +1,12 @@
+
 body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
   font-size: .875rem;
   font-family: 'Roboto', sans-serif;
+  background: black;
+  color: #fff;
 }
 
 h1,
@@ -52,13 +55,10 @@ h6 {
   font-size: .9375rem;
 }
 
-.card {
-  margin-bottom: 1.2rem;
-}
-
 .card-body {
   padding: 2rem;
 }
+
 
 @media (max-width: 991px) {
   .card-body {
@@ -70,6 +70,9 @@ h6 {
   margin-bottom: 20px;
 }
 
+.logo {
+  width: 80%;
+}
 .CodeMirror {
   font-size: .875rem;
   height: auto;
@@ -89,9 +92,9 @@ h6 {
 }
 
 .documentation .left-sidebar {
-  width: 260px;
+  width: 260px !important;
   padding: 20px 30px;
-  background-color: #f7f7f7;
+  background-color: #000000;
   position: fixed;
   top: 0;
   left: 0;
@@ -107,7 +110,7 @@ h6 {
 
 @media (min-width: 1200px) {
   .documentation .left-sidebar {
-    width: 16.66666667% !important;
+    width: 16.66666667%;
   }
 }
 
@@ -116,7 +119,11 @@ h6 {
     width: 25%;
   }
 }
-
+@media (max-width: 767px) {
+  .documentation .left-sidebar {
+    position: static;
+  }
+}
 .documentation .left-sidebar .logo-wrapper {
   margin-top: 1rem;
   margin-bottom: 1.6rem;
@@ -142,7 +149,7 @@ h6 {
 
 .documentation .left-sidebar .left-menu li a {
   text-decoration: none;
-  color: #454545;
+  color: #ffffff;
   cursor: pointer;
   padding-left: 18px;
 }
@@ -214,6 +221,13 @@ h6 {
   top: 6px;
 }
 
+.card {
+  background-color: #191c24;
+}
+.table {
+  color: #ffffff;
+}
+
 
 /* Pws-tabs */
 
@@ -235,7 +249,7 @@ h6 {
 	border-bottom: none;
 	border-right: none;
 	background: #fff;
-	color: #b66dff;
+	color: #b66dff !important;
 	padding: 0.6em 1.3em;
 	margin-right: 0;
 }
@@ -248,7 +262,7 @@ h6 {
 .pws_tabs_container ul.pws_tabs_controll li a.pws_tab_active {
 	background: -webkit-gradient(linear, left top, right top, from(#da8cff), to(#9a55ff));
 	background: linear-gradient(to right, #da8cff, #9a55ff);
-	color: #fff;
+	color: #fff !important;
 }
 
 .pws_tabs_container .demo-tabs {
@@ -288,6 +302,10 @@ h6 {
 
 .pws_tabs_container.pws_tabs_horizontal_bottom .pws_tabs_list {
 	margin-bottom: 0;
+}
+
+.pws_tabs_list {
+  background: #000000;
 }
 
 .pws_tabs_container.pws_tabs_horizontal_bottom .pws_tabs_controll {
@@ -336,10 +354,10 @@ li {
   list-style-type: none;
 }
 
-/* Pws-tabs end */
-
 @media (max-width: 767px) {
   .left-sidebar{
     display:none;
   }
 }
+
+/* Pws-tabs end */

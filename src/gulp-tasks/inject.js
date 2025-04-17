@@ -19,16 +19,11 @@ gulp.task('injectPartial', function () {
 gulp.task('injectAssets', function () {
     return gulp.src(["./**/*.html"])
         .pipe(inject(gulp.src([
-           './assets/vendors/feather/feather.css',
             './assets/vendors/mdi/css/materialdesignicons.min.css',
             './assets/vendors/ti-icons/css/themify-icons.css',
-            './assets/vendors/font-awesome/css/font-awesome.min.css',
-            './assets/vendors/typicons/typicons.css',
-            './assets/vendors/simple-line-icons/css/simple-line-icons.css',
             './assets/vendors/css/vendor.bundle.base.css',
             './assets/vendors/js/vendor.bundle.base.js',
-            './assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js',
-            './assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css' 
+            './assets/vendors/font-awesome/css/font-awesome.min.css'
         ], {
             read: false
         }), {
@@ -37,11 +32,9 @@ gulp.task('injectAssets', function () {
         }))
         .pipe(inject(gulp.src([
             // './assets/css/shared/style.css',
-             './assets/css/*.css',
             './assets/js/off-canvas.js',
-            './assets/js/template.js',
+            './assets/js/misc.js',
             './assets/js/settings.js',
-            './assets/js/hoverable-collapse.js',
             './assets/js/todolist.js'
         ], {
             read: false
